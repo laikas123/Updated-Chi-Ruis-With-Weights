@@ -1,0 +1,11 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../firmware/myproject.cpp in debug mode
+   Generating csim.exe
+obj/myproject_test.o: In function `main':
+/data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1/csim/build/../../../../myproject_test.cpp:85: undefined reference to `myproject(hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u> >&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u> >&, unsigned short&, unsigned short&)'
+/data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1/csim/build/../../../../myproject_test.cpp:116: undefined reference to `myproject(hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u> >&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u> >&, unsigned short&, unsigned short&)'
+collect2: error: ld returned 1 exit status
+make: *** [csim.exe] Error 1
+ERR: [SIM 100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 3] *************** CSIM finish ***************
