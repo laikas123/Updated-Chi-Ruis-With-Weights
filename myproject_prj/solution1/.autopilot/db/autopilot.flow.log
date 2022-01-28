@@ -2027,3 +2027,1213 @@ INFO: [SIM 211-3] *************** CSIM finish ***************
 Command     csim_design done; error code: 2; 4.37 sec.
 Command   ap_source done; error code: 1; 4.86 sec.
 Execute   cleanup_all 
+INFO-FLOW: Workspace /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1 opened at Thu Jan 27 21:01:52 CST 2022
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.13 sec.
+Command       ap_source done; 0.13 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       set_part xcvu9p-flgb2104-2-i 
+Execute         add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute           get_default_platform 
+Execute           license_isbetapart xcvu9p 
+Command           license_isbetapart done; error code: 1; 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute             get_default_platform 
+Execute             config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute             config_chip_info -quiet -speed medium 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute           config_chip_info -quiet -speed medium 
+Command         add_library done; 0.11 sec.
+Execute         add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+Execute         get_default_platform 
+Command       set_part done; 0.17 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       config_array_partition -maximum_size=4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute       config_compile -name_max_length=60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Command     open_solution done; 0.36 sec.
+Execute     config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute     config_compile -name_max_length 60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Execute     set_part xcvu9p-flgb2104-2-i 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute           config_chip_info -quiet -speed medium 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       get_default_platform 
+Command     set_part done; 0.16 sec.
+Execute     create_clock -period 5 -name default 
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       get_default_platform 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 1.18 sec.
+Command   ap_source done; error code: 1; 1.72 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1 opened at Thu Jan 27 21:03:26 CST 2022
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.14 sec.
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.15 sec.
+Command       ap_source done; 0.15 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       set_part xcvu9p-flgb2104-2-i 
+Execute         add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute           get_default_platform 
+Execute           license_isbetapart xcvu9p 
+Command           license_isbetapart done; error code: 1; 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute             get_default_platform 
+Execute             config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute             config_chip_info -quiet -speed medium 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute           config_chip_info -quiet -speed medium 
+Execute         add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+Execute         get_default_platform 
+Command       set_part done; 0.14 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       config_array_partition -maximum_size=4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute       config_compile -name_max_length=60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Command     open_solution done; 0.35 sec.
+Execute     config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute     config_compile -name_max_length 60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Execute     set_part xcvu9p-flgb2104-2-i 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute           config_chip_info -quiet -speed medium 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       get_default_platform 
+Command     set_part done; 0.14 sec.
+Execute     create_clock -period 5 -name default 
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       get_default_platform 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 1.18 sec.
+Command   ap_source done; error code: 1; 1.69 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1 opened at Thu Jan 27 21:06:15 CST 2022
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.13 sec.
+Command       ap_source done; 0.13 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       set_part xcvu9p-flgb2104-2-i 
+Execute         add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute           get_default_platform 
+Execute           license_isbetapart xcvu9p 
+Command           license_isbetapart done; error code: 1; 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute             get_default_platform 
+Execute             config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute             config_chip_info -quiet -speed medium 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command               ap_source done; 0.11 sec.
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source done; 0.11 sec.
+Command           ap_source done; 0.11 sec.
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute           config_chip_info -quiet -speed medium 
+Command         add_library done; 0.13 sec.
+Execute         add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+Execute         get_default_platform 
+Command       set_part done; 0.18 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       config_array_partition -maximum_size=4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute       config_compile -name_max_length=60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Command     open_solution done; 0.37 sec.
+Execute     config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute     config_compile -name_max_length 60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Execute     set_part xcvu9p-flgb2104-2-i 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute           config_chip_info -quiet -speed medium 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       get_default_platform 
+Command     set_part done; 0.14 sec.
+Execute     create_clock -period 5 -name default 
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       get_default_platform 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 1.19 sec.
+Command   ap_source done; error code: 1; 1.71 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1 opened at Thu Jan 27 21:09:38 CST 2022
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.14 sec.
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       ap_source done; 0.14 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       set_part xcvu9p-flgb2104-2-i 
+Execute         add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute           get_default_platform 
+Execute           license_isbetapart xcvu9p 
+Command           license_isbetapart done; error code: 1; 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute             get_default_platform 
+Execute             config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute             config_chip_info -quiet -speed medium 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute           config_chip_info -quiet -speed medium 
+Execute         add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+Execute         get_default_platform 
+Command       set_part done; 0.15 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       config_array_partition -maximum_size=4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute       config_compile -name_max_length=60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Command     open_solution done; 0.35 sec.
+Execute     config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute     config_compile -name_max_length 60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Execute     set_part xcvu9p-flgb2104-2-i 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute           config_chip_info -quiet -speed medium 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       get_default_platform 
+Command     set_part done; 0.14 sec.
+Execute     create_clock -period 5 -name default 
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       get_default_platform 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 1.26 sec.
+Command   ap_source done; error code: 1; 1.77 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1 opened at Thu Jan 27 21:10:45 CST 2022
+Execute       config_clock -quiet -name default -period 5 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 5ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute         config_chip_info -quiet -speed medium 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.13 sec.
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.14 sec.
+Command       ap_source done; 0.14 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute       source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       set_part xcvu9p-flgb2104-2-i 
+Execute         add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute           get_default_platform 
+Execute           license_isbetapart xcvu9p 
+Command           license_isbetapart done; error code: 1; 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute             get_default_platform 
+Execute             config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute             config_chip_info -quiet -speed medium 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute           config_chip_info -quiet -speed medium 
+Execute         add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flgb2104-2-i'
+Execute         get_default_platform 
+Command       set_part done; 0.15 sec.
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       config_array_partition -maximum_size=4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute       config_compile -name_max_length=60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Command     open_solution done; 0.35 sec.
+Execute     config_array_partition -maximum_size 4096 
+INFO: [XFORM 203-101] Allowed max sub elements number after partition is 4096.
+Execute     config_compile -name_max_length 60 
+INFO: [XFORM 203-1161] The maximum of name length is set into 60.
+Execute     set_part xcvu9p-flgb2104-2-i 
+Execute       add_library xilinx/virtexuplus/virtexuplus:xcvu9p:-flgb2104:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xcvu9p 
+Command         license_isbetapart done; error code: 1; 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/dsp48e2.hlp 
+Execute           get_default_platform 
+Execute           config_chip_info -quiet -resource  {SLICE 98520}  {LUT 788160}    {FF 1576320} {DSP48E 4560}  {BRAM 2880} {URAM 640}  
+Execute           config_chip_info -quiet -speed medium 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 147780} {LUT 1182240}   {FF 2364480} {DSP48E 6840}  {BRAM 4320} {URAM 960}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/virtexuplus/virtexuplus_fpv7 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute             source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_hp.hlp 
+Execute         source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/virtexuplus/virtexuplus_fpv7.gen 
+Execute           source /data/Xilinx/Vivado/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       get_default_platform 
+Command     set_part done; 0.14 sec.
+Execute     create_clock -period 5 -name default 
+Execute     csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+Execute       source csim/.lst_opt.tcl 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_test.cpp 
+Execute       is_encrypted /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       is_xip /data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/firmware/myproject.cpp 
+Execute       get_default_platform 
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+Command     csim_design done; error code: 2; 1.12 sec.
+Command   ap_source done; error code: 1; 1.63 sec.
+Execute   cleanup_all 

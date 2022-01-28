@@ -1,11 +1,13 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../../firmware/myproject.cpp in debug mode
-   Generating csim.exe
-obj/myproject_test.o: In function `main':
-/data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1/csim/build/../../../../myproject_test.cpp:85: undefined reference to `myproject(hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u> >&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u> >&, unsigned short&, unsigned short&)'
-/data1/laikas/hls4ml-tutorial/final_deepcalo/12-21-2021/deepcalo-12-02-2021-image-only/deepcalo-with-hls-4-ml-v0.1_2021_11/demos/atlas_specific_usecases/train_recommended_electron_models_for_hls4ml/Deepcalo_model/myproject_prj/solution1/csim/build/../../../../myproject_test.cpp:116: undefined reference to `myproject(hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 4u> >&, hls::stream<nnet::array<ap_fixed<16, 6, (ap_q_mode)5, (ap_o_mode)3, 0>, 1u> >&, unsigned short&, unsigned short&)'
-collect2: error: ld returned 1 exit status
-make: *** [csim.exe] Error 1
+   Compiling ../../../../myproject_test.cpp in debug mode
+../../../../myproject_test.cpp: In function ‘int main(int, char**)’:
+../../../../myproject_test.cpp:95:128: error: cannot convert ‘model_weightdefault_t {aka ap_fixed<16, 6>}’ to ‘model_weightdefault_t* {aka ap_fixed<16, 6>*}’ for argument ‘5’ to ‘void myproject(hls::stream<nnet::array<ap_fixed<16, 6>, 4u> >&, hls::stream<nnet::array<ap_fixed<16, 6>, 1u> >&, short unsigned int&, short unsigned int&, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*)’
+       myproject(em_barrel,layer55_out,size_in1,size_out1, w27[73728],w31[147456],w36[294912],w40[589824],w45[589824],w49[65536]);
+                                                                                                                                ^
+../../../../myproject_test.cpp:133:126: error: cannot convert ‘model_weightdefault_t {aka ap_fixed<16, 6>}’ to ‘model_weightdefault_t* {aka ap_fixed<16, 6>*}’ for argument ‘5’ to ‘void myproject(hls::stream<nnet::array<ap_fixed<16, 6>, 4u> >&, hls::stream<nnet::array<ap_fixed<16, 6>, 1u> >&, short unsigned int&, short unsigned int&, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*, model_weightdefault_t*)’
+     myproject(em_barrel,layer55_out,size_in1,size_out1, w27[73728],w31[147456],w36[294912],w40[589824],w45[589824],w49[65536]);
+                                                                                                                              ^
+make: *** [obj/myproject_test.o] Error 1
 ERR: [SIM 100] 'csim_design' failed: compilation error(s).
 INFO: [SIM 3] *************** CSIM finish ***************

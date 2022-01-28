@@ -32,6 +32,8 @@
 
 #define CHECKPOINT 5000
 
+typedef ap_fixed<16,6> model_weightdefault_t;
+
 namespace nnet {
     bool trace_enabled = true;
     std::map<std::string, void *> *trace_outputs = NULL;
@@ -80,9 +82,17 @@ int main(int argc, char **argv)
       nnet::copy_data<float, input_t, 0, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(in, em_barrel);
       hls::stream<result_t> layer55_out("layer55_out");
 
+      model_weightdefault_t  w27[73728];
+      model_weightdefault_t w31[147456];
+      model_weightdefault_t  w36[294912];
+      model_weightdefault_t  w40[589824];
+      model_weightdefault_t  w45[589824];
+      model_weightdefault_t  w49[65536];
+
+
       //hls-fpga-machine-learning insert top-level-function
       unsigned short size_in1,size_out1;
-      myproject(em_barrel,layer55_out,size_in1,size_out1);
+      myproject(em_barrel,layer55_out,size_in1,size_out1, w27[73728],w31[147456],w36[294912],w40[589824],w45[589824],w49[65536]);
 
       if (e % CHECKPOINT == 0) {
         std::cout << "Predictions" << std::endl;
@@ -111,9 +121,16 @@ int main(int argc, char **argv)
     nnet::fill_zero<input_t, N_INPUT_1_1*N_INPUT_2_1*N_INPUT_3_1>(em_barrel);
     hls::stream<result_t> layer55_out("layer55_out");
 
+    model_weightdefault_t  w27[73728];
+    model_weightdefault_t w31[147456];
+    model_weightdefault_t  w36[294912];
+    model_weightdefault_t  w40[589824];
+    model_weightdefault_t  w45[589824];
+    model_weightdefault_t  w49[65536];
+ 
     //hls-fpga-machine-learning insert top-level-function
     unsigned short size_in1,size_out1;
-    myproject(em_barrel,layer55_out,size_in1,size_out1);
+    myproject(em_barrel,layer55_out,size_in1,size_out1, w27[73728],w31[147456],w36[294912],w40[589824],w45[589824],w49[65536]);
 
     //hls-fpga-machine-learning insert output
     nnet::print_result<result_t, N_LAYER_53>(layer55_out, std::cout, true);
